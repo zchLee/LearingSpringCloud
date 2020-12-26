@@ -1,0 +1,12 @@
+server:
+  port: 81
+spring:
+  application:
+    name: cloud-consumer-order
+  cloud:
+    # consul 作为服务注册中心
+    consul:
+      discovery:
+        service-name: ${spring.application.name}
+      host: localhost  # ip 地址
+      port: 8500      # 端口地址
