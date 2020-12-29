@@ -18,6 +18,14 @@
       <module>cloud-provider-payment8006</module>
     <module>cloud-consumerzk-order81</module>
     <module>cloud-consumerconsul-order81</module>
+      <module>cloud-consumer-feign-order81</module>
+      <module>cloud-provider-hystrix-payment8001</module>
+      <module>cloud-consumer-feign-hystrix-order81</module>
+      <module>cloud-consumer-hystrix-dashboard9001</module>
+      <module>cloud-gateway-gateway9527</module>
+      <module>cloud-config-center-3344</module>
+      <module>cloud-config-client-3355</module>
+      <module>cloud-config-client-3366</module>
   </modules>
   <packaging>pom</packaging>
   <name>Cloud2020</name>

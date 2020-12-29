@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author lzc
@@ -45,5 +46,18 @@ public class PaymentController {
         if (payment != null)
             return new CommonResult(200, serverPort+ "：查询成功",payment);
         return CommonResult.error("没有找到数据：" + id + "：对应数据不存在");
+    }
+
+    @GetMapping("/payment/feign/timeout")
+    public String paymentFeignTimeout() {
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        }catch (Exception e) {}
+        return serverPort;
+    }
+
+    @GetMapping("/payment/lb")
+    public Object lb() {
+        return this.serverPort;
     }
 }
