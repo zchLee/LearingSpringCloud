@@ -1,4 +1,4 @@
-package com.lea.springcloud.config;
+package com.springcloud.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
@@ -7,13 +7,13 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * @author lzc
- * @create 2020-12-25 16:40
+ * @create 2020-12-30 21:16
  */
 @Configuration
-public class ApplicationContextConfig {
+public class ContextConfig {
 
     @Bean
-    @LoadBalanced  // 赋予RestTemplate负载均衡的能力
+    @LoadBalanced
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }

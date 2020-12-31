@@ -83,4 +83,9 @@ public class PaymentController {
         }catch (Exception e) {}
         return serverPort;
     }
+
+    @GetMapping("/payment/zipkin")
+    public Object zipkin() {
+        return "hi, are you ok ?";
+    }
 }
